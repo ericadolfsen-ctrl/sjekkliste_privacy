@@ -29,3 +29,12 @@
   margin: 0;
   color: #333;
 }
+.faq summary::after {
+  content: "＋";
+  float: right;
+  font-weight: 600;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
