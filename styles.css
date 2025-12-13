@@ -1,40 +1,396 @@
+/* ======================================================
+   Sjekkliste_Y – styles.css (clean / Apple-like)
+   Mobile-first, no framework, auto light/dark
+   ====================================================== */
+
+/* 1) Design tokens */
+:root {
+  color-scheme: light dark;
+
+  /* Light (default) */
+  --bg: #ffffff;
+  --text: #0b0b0f;
+  --muted: #6b6f76;
+
+  --line: rgba(0, 0, 0, 0.10);
+  --card: rgba(0, 0, 0, 0.03);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --accent: #007aff;
+  --accent-pressed: #0062cc;
+
+  --r-xl: 22px;
+  --r-lg: 18px;
+  --r-md: 14px;
+  --r-sm: 12px;
+
+  --pad: 18px;
+
+  --fs-hero: clamp(34px, 4.5vw, 48px);
+  --fs-h2: 20px;
+  --fs-body: 16px;
+  --lh: 1.55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0f;
+    --text: #f5f6f7;
+    --muted: #a7abb2;
+
+    --line: rgba(255, 255, 255, 0.12);
+    --card: rgba(255, 255, 255, 0.06);
+
+    --shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+
+    --accent: #0a84ff;
+    --accent-pressed: #006fe6;
+  }
+}
+
+/* 2) Base / reset */
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+               Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--lh);
+  font-size: var(--fs-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+p { margin: 0 0 14px; color: var(--muted); }
+
+h1, h2, h3 { margin: 0 0 10px; color: var(--text); letter-spacing: -0.01em; }
+
+h1 { font-size: var(--fs-hero); letter-spacing: -0.02em; line-height: 1.08; }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: 16px; }
+
+ul { margin: 0; padding: 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 20px 0;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 55%, transparent);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* 3) Layout helpers */
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 18px 48px;
+}
+
+.section { margin-top: 22px; }
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: color-mix(in oklab, var(--bg) 85%, var(--card));
+  padding: var(--pad);
+}
+
+/* 4) Topbar / language pills */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0 18px;
+}
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+  user-select: none;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--muted) 35%, var(--line));
+}
+
+.pill.active {
+  color: var(--text);
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+}
+
+/* 5) Hero */
+.hero {
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  background:
+    radial-gradient(900px 280px at 20% 0%,
+      color-mix(in oklab, var(--accent) 18%, transparent),
+      transparent 60%),
+    radial-gradient(900px 280px at 80% 0%,
+      color-mix(in oklab, var(--accent) 10%, transparent),
+      transparent 60%),
+    color-mix(in oklab, var(--card) 92%, transparent);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--bg) 80%, var(--card));
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 60ch;
+}
+
+/* 6) Buttons */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn:active { transform: translateY(0px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: color-mix(in oklab, var(--accent) 70%, black);
+  box-shadow: 0 10px 22px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary:active { background: var(--accent-pressed); }
+
+.btn-secondary {
+  background: color-mix(in oklab, var(--bg) 80%, var(--card));
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--muted) 35%, var(--line));
+}
+
+/* 7) Feature list */
+.features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 10px;
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--card) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+}
+
+.check {
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--accent) 18%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 30%, var(--line));
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* 8) Optional media box (tips / screenshots placeholder) */
+.media {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.shot {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  padding: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 9) FAQ (details/summary) */
 .faq {
   max-width: 700px;
   margin-top: 3rem;
 }
 
 .faq details {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
   margin-bottom: 0.75rem;
-  background: #fff;
+  background: color-mix(in oklab, var(--bg) 85%, var(--card));
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.faq details:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--muted) 35%, var(--line));
 }
 
 .faq summary {
   font-weight: 600;
   cursor: pointer;
   list-style: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.faq summary::-webkit-details-marker {
-  display: none;
-}
+.faq summary::-webkit-details-marker { display: none; }
 
-.faq details[open] summary {
-  margin-bottom: 0.5rem;
-}
+.faq details[open] summary { margin-bottom: 0.5rem; }
 
-.faq p {
-  margin: 0;
-  color: #333;
-}
+.faq p { margin: 0; color: var(--muted); }
+
 .faq summary::after {
   content: "＋";
-  float: right;
-  font-weight: 600;
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-1px);
 }
 
-.faq details[open] summary::after {
-  content: "−";
+.faq details[open] summary::after { content: "−"; }
+
+.faq summary:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--text) 10%, transparent);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.faq details[open] {
+  background: color-mix(in oklab, var(--bg) 78%, var(--card));
+}
+
+/* 10) Footer */
+footer {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer nav {
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+footer nav a:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--muted) 35%, var(--line));
+}
+
+/* 11) Desktop refinement */
+@media (min-width: 860px) {
+  .wrap { padding: 28px 22px 60px; }
+  .hero { padding: 26px; }
+  .hero-grid { grid-template-columns: 1.2fr 0.8fr; }
+  .shot { height: 100%; display: grid; align-content: center; }
 }
