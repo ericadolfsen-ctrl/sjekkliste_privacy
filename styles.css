@@ -286,6 +286,52 @@ hr {
   grid-template-columns: 1fr;
   gap: 12px;
 }
+/* Screenshots – one at a time (swipe), no JS */
+.screens {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 12px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 0 2px 6px;
+}
+
+.screen {
+  margin: 0;
+  scroll-snap-align: start;
+
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--bg) 85%, var(--card));
+  box-shadow: var(--shadow);
+  padding: 10px;
+}
+
+.screen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border-radius: calc(var(--r-lg) - 6px);
+  border: 1px solid color-mix(in oklab, var(--line) 80%, transparent);
+}
+
+.screens-hint {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (min-width: 860px) {
+  .screens {
+    grid-auto-columns: 48%;
+  }
+  .screens-hint { display: none; }
+}
 
 .shot {
   border: 1px solid var(--line);
