@@ -262,6 +262,12 @@ hr {
   border-color: color-mix(in oklab, var(--accent) 70%, black);
   box-shadow: 0 10px 22px color-mix(in oklab, var(--accent) 22%, transparent);
 }
+/* App Store CTA – disabled state (before launch) */
+.appstore-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  box-shadow: none;
+}
 
 .btn-primary:hover { transform: translateY(-1px); }
 .btn-primary:active { background: var(--accent-pressed); }
