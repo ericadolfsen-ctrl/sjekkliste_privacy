@@ -472,30 +472,40 @@ footer nav a:hover {
   .hero-grid { grid-template-columns: 1.2fr 0.8fr; }
   .shot { height: 100%; display: grid; align-content: center; }
 }
-/* Sticky nav (mobile only) */
+/* Mobile fixed nav (reliable) */
 @media (max-width: 859px) {
   .site-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 50;
+    left: 0;
+    right: 0;
+    z-index: 999;
 
-    /* iOS safe area + litt luft */
-    padding: calc(env(safe-area-inset-top) + 10px) 0 10px;
+    padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+    margin: 0;
 
-    /* “Glass” */
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
     background: color-mix(in oklab, var(--bg) 75%, transparent);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
     border-bottom: 1px solid var(--line);
-    margin: 0 0 14px;
-
-    /* Litt “inset” følelse */
-    border-radius: 0 0 var(--r-lg) var(--r-lg);
   }
 
-  /* Sørg for at lenkene ikke klemmes */
+  /* Flytt innholdet ned slik at nav ikke dekker hero */
+  .wrap {
+    padding-top: calc(env(safe-area-inset-top) + 72px);
+  }
+
   .nav-link {
     padding: 7px 12px;
+  }
+
+  /* Topbar kan få mindre luft når nav er fixed */
+  .topbar {
+    padding-top: 0;
   }
 }
