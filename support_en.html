@@ -1,118 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sjekkliste_Y – Support</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            margin: 40px auto;
-            max-width: 800px;
-            line-height: 1.6;
-        }
-        h1 { font-size: 32px; }
-        h2 { margin-top: 32px; }
-        .lang {
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sjekkliste_Y – Support</title>
+  <meta name="description" content="Support for Sjekkliste_Y: FAQ, contact, and resources." />
+
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="lang" aria-label="Language selector">
+        <span>Language:</span>
+        <strong>English</strong>
+        <a href="support.html" lang="nb">Norsk</a>
+      </div>
+    </header>
 
-<div class="lang">
-    Language: <strong>English</strong> · <a href="support.html">Norsk</a>
-</div>
+    <main>
+      <section class="hero" aria-label="Support">
+        <div class="hero-grid">
+          <div>
+            <div class="badge"><span class="dot" aria-hidden="true"></span> Support</div>
+            <h1>Support</h1>
+            <p class="lead">
+              Find answers to common questions and contact details if something isn’t working as expected in Sjekkliste_Y.
+            </p>
 
-<h1>Support for Check List_Y</h1>
-<p>
-    This page provides help and information if something in the Sjekkliste_Y app
-    is not working as expected.
-</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">Contact support</a>
+              <a class="btn btn-secondary" href="index_en.html">Back to landing page</a>
+            </div>
+          </div>
 
-<h2>Frequently Asked Questions</h2>
+          <div class="media" aria-label="Before you contact us">
+            <div class="shot">
+              <strong style="color:var(--text); display:block; margin-bottom:6px;">Before you contact us</strong>
+              Please include:
+              <div style="margin-top:10px; border-top:1px solid var(--line); padding-top:10px; color:var(--muted);">
+                • iPhone model and iOS version<br>
+                • What you expected vs. what happened<br>
+                • A screenshot (if relevant)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section class="faq">
+      <section class="section" aria-label="FAQ">
+        <h2>Frequently asked questions</h2>
 
-  <details>
-    <summary>Who is the app for?</summary>
-    <p>
-      Check List_Y is designed for private individuals who are taking delivery of
-      a Tesla Model Y and want a structured way to inspect the vehicle.
-    </p>
-  </details>
+        <section class="faq">
+          <details>
+            <summary>Who is this app for?</summary>
+            <p>
+              Sjekkliste_Y is for private individuals taking delivery of a Tesla Model Y (new or used) who want a structured inspection workflow.
+            </p>
+          </details>
 
-  <details>
-    <summary>Do I need an internet connection to use the app?</summary>
-    <p>
-      No. The checklist works fully offline. An internet connection is only
-      required if you choose to share or store the generated PDF report using
-      external services.
-    </p>
-  </details>
+          <details>
+            <summary>Does the app work without internet?</summary>
+            <p>
+              Yes. The checklist works offline. Internet is only required if you choose to share or save the generated PDF using external services.
+            </p>
+          </details>
 
-  <details>
-    <summary>What data does the app collect?</summary>
-    <p>
-      The app does not collect or transmit any personal data. All notes, images
-      and checklist results are stored locally on your device.
-    </p>
-  </details>
+          <details>
+            <summary>Where are photos and data stored?</summary>
+            <p>
+              All photos and notes are stored locally on your device. No data is sent to external servers.
+            </p>
+          </details>
 
-  <details>
-    <summary>Where are photos and reports stored?</summary>
-    <p>
-      Photos and reports are stored locally on your phone. They are not uploaded
-      to any servers or shared without your explicit action.
-    </p>
-  </details>
+          <details>
+            <summary>Can I export the result?</summary>
+            <p>
+              Yes. The app generates a complete PDF report that you can save or share directly from your phone.
+            </p>
+          </details>
 
-  <details>
-    <summary>Can I export or share the inspection results?</summary>
-    <p>
-      Yes. The app generates a complete PDF report that can be saved or shared
-      directly from your device.
-    </p>
-  </details>
+          <!-- Extra FAQ points (requested) -->
+          <details>
+            <summary>I can’t share or save the PDF. What should I do?</summary>
+            <p>
+              First, try generating the PDF again. Then ensure you have at least a small amount of free storage available.
+              If sharing fails, try a different target (e.g., Files, Mail) to confirm whether the issue is with a specific app/service.
+            </p>
+          </details>
 
-  <details>
-    <summary>Is the checklist customizable?</summary>
-    <p>
-      Yes. You can add your own custom checklist items and notes in addition to
-      the predefined inspection points.
-    </p>
-  </details>
+          <details>
+            <summary>The app can’t access the camera/photos. How do I fix it?</summary>
+            <p>
+              Check iOS permissions: Settings → Sjekkliste_Y → allow Camera and Photos (or “Add Photos Only” if available).
+              If permissions are denied, image capture/selection will not work.
+            </p>
+          </details>
 
-  <details>
-    <summary>Is this app affiliated with Tesla?</summary>
-    <p>
-      No. Sjekkliste_Y is an independent application and is not affiliated with,
-      endorsed by, or connected to Tesla, Inc.
-    </p>
-  </details>
+          <details>
+            <summary>How do I reset the checklist?</summary>
+            <p>
+              Use “New check – empty list”. This clears selections, notes, and photos for the current check.
+              Please note: this cannot be undone.
+            </p>
+          </details>
 
-</section>
+          <details>
+            <summary>Why are some items not marked as completed?</summary>
+            <p>
+              Some sections require an explicit choice per item (e.g., OK / Not OK / Missing). Items left as “Select” are counted as not completed.
+            </p>
+          </details>
 
+          <details>
+            <summary>Can I add my own checklist items?</summary>
+            <p>
+              Yes. You can add custom items during your inspection to capture anything you want to remember or document.
+            </p>
+          </details>
+        </section>
+      </section>
 
-<h2>Contact</h2>
-<p>
-    If you need assistance, have suggestions or want to report an issue,
-    you can contact us at:
-    <strong>
-  <a href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">
-    support@sjekklistey.com
-  </a>
-</strong>
+      <section class="section" aria-label="Contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <p style="margin-bottom: 10px;">
+            Need help, want to report a bug, or share feedback? Contact us here:
+          </p>
 
-</p>
+          <div class="cta-row" style="margin-top: 0;">
+            <a class="btn btn-primary" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">
+              support@sjekklistey.com
+            </a>
+            <a class="btn btn-secondary" href="privacy.html">Privacy Policy</a>
+          </div>
 
-<h2>Other resources</h2>
-<p>
-    <a href="index_en.html">App information (English)</a><br>
-    <a href="index.html">App information (Norwegian)</a><br>
-    <a href="privacy.html">Privacy Policy</a>
-</p>
+          <p style="margin-top: 12px; margin-bottom: 0; font-size: 14px; color: var(--muted);">
+            We typically respond within a short time on weekdays.
+          </p>
+        </div>
+      </section>
 
+      <footer>
+        <div>© <span id="year"></span> Sjekkliste_Y</div>
+        <nav aria-label="Quick links">
+          <a href="index_en.html">Home</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
