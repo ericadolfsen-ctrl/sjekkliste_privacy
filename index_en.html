@@ -1,41 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sjekkliste_Y – Tesla Model Y Delivery Checklist</title>
-  <!-- Viktig for systemkontroller (dark/light) -->
-  <meta name="color-scheme" content="light dark" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sjekkliste_Y – Tesla Model Y Delivery Checklist</title>
+  <meta name="description" content="Sjekkliste_Y helps you inspect your Tesla Model Y at delivery with a structured checklist, photos, and a PDF report." />
 
-  <!-- Global styles -->
+  <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="lang" aria-label="Language selector">
+        <span>Language:</span>
+        <strong>English</strong>
+        <a href="index.html" lang="nb">Norsk</a>
+      </div>
+    </header>
 
-<div class="lang">
-    Language: <strong>English</strong> · <a href="index.html">Norsk</a>
-</div>
+    <main>
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-grid">
+          <div>
+            <div class="badge"><span class="dot" aria-hidden="true"></span> App for Tesla Model Y delivery</div>
+            <h1>Sjekkliste_Y</h1>
 
-<h1>Sjekkliste_Y</h1>
-<p>
-    Sjekkliste_Y is a simple and focused app for inspecting your Tesla Model Y at delivery.
-    The app helps you go through the car step by step, document issues with photos,
-    and generate a complete PDF report directly on your phone.
-</p>
+            <p class="lead">
+              A simple, focused app to inspect your Tesla Model Y at delivery. Go through the car step by step,
+              document issues with photos, and generate a complete PDF report directly on your phone.
+            </p>
 
-<h2>Main features</h2>
-<ul>
-    <li>Step-by-step checklist tailored for Tesla Model Y</li>
-    <li>Mark each item as OK or with an issue</li>
-    <li>Add notes and up to three photos per checklist item</li>
-    <li>Create your own custom checklist items</li>
-    <li>Verify that all required equipment is included</li>
-    <li>Generate a PDF report that can be saved or shared</li>
-</ul>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="support_en.html">Support & Contact</a>
+              <a class="btn btn-secondary" href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
 
-<a class="btn" href="support_en.html">Support & Contact</a>
-<a class="btn" href="privacy.html">Privacy Policy</a>
+          <div class="media" aria-label="Preview">
+            <div class="shot">
+              <strong style="color:var(--text); display:block; margin-bottom:6px;">Tip</strong>
+              Add 1–2 screenshots from the app here (PNG/JPG). It builds instant trust.
+              <div style="margin-top:10px; border-top:1px solid var(--line); padding-top:10px;">
+                You can also add a short “How it works” list in the next step.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section" aria-label="Main features">
+        <h2>Main features</h2>
+        <div class="card">
+          <ul class="features">
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Step-by-step checklist tailored for Tesla Model Y</span></li>
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Mark each item as OK or with an issue</span></li>
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Add notes and up to three photos per checklist item</span></li>
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Create your own custom checklist items</span></li>
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Verify that all required equipment is included</span></li>
+            <li class="feature"><span class="check" aria-hidden="true">✓</span><span>Generate a PDF report that can be saved or shared</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Sjekkliste_Y</div>
+        <nav aria-label="Quick links">
+          <a href="support_en.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
