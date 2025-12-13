@@ -91,6 +91,38 @@ hr {
   outline-offset: 3px;
   border-radius: 10px;
 }
+/* Global site navigation */
+.site-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--muted) 40%, var(--line));
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
 
 /* 3) Layout helpers */
 .wrap {
