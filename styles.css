@@ -750,5 +750,15 @@ footer nav a:hover {
 
   .screenshot-img {
     height: 360px;
+ /* === Overstyring: App Store-badge størrelse === */
+.appstore-badge-img {
+  height: 28px;   /* mindre badge på desktop */
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .appstore-badge-img {
+    height: 24px; /* litt mindre på små skjermer */
   }
 }
