@@ -761,4 +761,17 @@ footer nav a:hover {
   .appstore-badge-img {
     height: 24px; /* litt mindre på små skjermer */
   }
+   /* === Overstyring: Reveal-video kompakt og beskåret === */
+.reveal-card {
+  max-width: 360px;      /* mindre bredde enn 420px */
+  aspect-ratio: 9 / 16;  /* lås høyde – typisk “story”-format */
+}
+
+.reveal-video {
+  width: 100%;
+  height: 100%;          /* fyll hele kortet */
+  object-fit: cover;     /* zoom litt inn */
+  object-position: center top; /* behold toppen, cropp bunnen (der badgen er) */
+}
+
 }
