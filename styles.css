@@ -668,31 +668,25 @@ footer nav a:hover {
   line-height: 1.35;
 }
 
-/* Responsiv tilpasning for hero + grid */
-@media (max-width: 980px) {
-  .hero-sjekklistey .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-media-image,
-  .hero-video {
-    max-width: 640px;
-  }
-
-  .screenshot-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* Basis for screenshots og hero */
+.screenshot-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
-@media (max-width: 560px) {
-  .screenshot-grid {
-    grid-template-columns: 1fr;
-  }
+.screenshot-img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.18);
+}
 
-  .screenshot-img {
-    height: 360px;
-  }
-   .reveal-card {
+/* Reveal-kortet m/video – BASIS (gjelder alle skjermer) */
+.reveal-card {
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -725,13 +719,36 @@ footer nav a:hover {
   margin-left: auto;
 }
 
+/* Responsiv tilpasning for hero + grid */
 @media (max-width: 980px) {
+  .hero-sjekklistey .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media-image,
+  .hero-video {
+    max-width: 640px;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Flytt reveal-elementene inn, sentrer/venstre på mobil/tablet */
   .reveal-card,
   .reveal-caption,
   .reveal-badges {
     max-width: 560px;
-    margin-left: 0; /* sentrer/venstre på mobil */
+    margin-left: 0;
   }
 }
 
+@media (max-width: 560px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-img {
+    height: 360px;
+  }
 }
