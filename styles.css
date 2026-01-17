@@ -552,4 +552,139 @@ footer nav a:hover {
   .topbar {
     padding-top: 0;
   }
+   /* Layout constraints */
+.page-sjekklistey {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+/* HERO */
+.hero-sjekklistey .hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: start;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.hero-sjekklistey h1 {
+  margin: 0 0 10px;
+  line-height: 1.05;
+}
+
+.hero-subtitle {
+  margin: 0 0 18px;
+  max-width: 46ch;
+  opacity: 0.9;
+}
+
+/* CTA group spacing */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0 8px;
+}
+
+/* HERO media card (works for img now, video later) */
+.hero-media-card {
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+}
+
+/* Prevent "full size" media */
+.hero-media-image {
+  display: block;
+  width: 100%;
+  max-width: 520px;       /* controls hero media width */
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Optional: if you later swap in <video class="hero-video"> */
+.hero-video {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+/* Sections spacing */
+.section {
+  margin-top: 28px;
+}
+
+.section-inner {
+  padding: 0 6px;
+}
+
+.section-lead {
+  max-width: 70ch;
+  opacity: 0.9;
+}
+
+/* Screenshots grid */
+.screenshot-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.screenshot-card {
+  margin: 0;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.screenshot-img {
+  display: block;
+  width: 100%;
+  height: 320px;          /* key: stops full-size screenshots */
+  object-fit: contain;    /* shows full screenshot without cropping */
+  border-radius: 14px;
+  background: rgba(0,0,0,0.18);
+}
+
+.screenshot-card figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero-sjekklistey .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-media-image,
+  .hero-video {
+    max-width: 640px;
+  }
+  .screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  .screenshot-img {
+    height: 360px;
+  }
+}
+
 }
