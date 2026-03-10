@@ -7,160 +7,199 @@
   <meta name="description" content="Support for Sjekkliste_Y: FAQ, contact, and resources." />
 
   <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (_) {}
+  </script>
+  <style>
+    html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+  </style>
 </head>
 
-<body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="lang" aria-label="Language selector">
-        <span>Language:</span>
-        <strong>English</strong>
-        <a href="support.html" lang="nb">Norsk</a>
-      </div>
-    </header>
+<body class="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 hidden opacity-70 dark:block">
+    <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.055)_1px,transparent_1px)] [background-size:26px_26px]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950"></div>
+  </div>
 
-    <nav class="site-nav" aria-label="Main navigation">
-  <a href="index_en.html" class="nav-link">Home</a>
-  <a href="support_en.html" class="nav-link">Support</a>
-  <a href="privacy_en.html" class="nav-link">Privacy</a>
-</nav>
+  <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-slate-950/70">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="index_en.html" class="flex items-center gap-3">
+        <img src="assets/icon/IMG_4744.PNG" alt="Check List_Y" width="40" height="40" class="h-10 w-10 rounded-xl border border-slate-200/60 dark:border-white/10" loading="eager" decoding="async" />
+        <span class="text-sm font-semibold tracking-tight">Check List_Y</span>
+      </a>
 
-    <main>
-      <section class="hero" aria-label="Support">
-        <div class="hero-grid">
-          <div>
-            <div class="badge"><span class="dot" aria-hidden="true"></span> Support</div>
-            <h1>Support</h1>
-            <p class="lead">
-              Find answers to common questions and contact details if something isn’t working as expected in Sjekkliste_Y.
-            </p>
+      <nav class="flex flex-wrap items-center justify-end gap-2" aria-label="Main navigation">
+        <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10" href="index_en.html">Home</a>
+        <a class="rounded-full bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-900 dark:bg-white/10 dark:text-white" href="support_en.html" aria-current="page">Support</a>
+        <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10" href="privacy_en.html">Privacy</a>
+        <div class="flex items-center gap-1 rounded-full border border-slate-200/70 bg-white/60 p-1 text-xs font-semibold text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200" aria-label="Language">
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900">EN</span>
+          <a class="inline-flex h-7 w-7 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white" href="support.html" hreflang="nb">NO</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-            <div class="cta-row">
-              <a class="btn btn-primary" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">Contact support</a>
-              <a class="btn btn-secondary" href="index_en.html">Back to landing page</a>
-            </div>
+  <main>
+    <section class="border-b border-slate-200/60 py-10 dark:border-white/10">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200">
+            <span class="inline-block h-2 w-2 rounded-full bg-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] dark:bg-sky-400 dark:shadow-[0_0_0_4px_rgba(56,189,248,0.18)]"></span>
+            Support
           </div>
+          <h1 class="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Support</h1>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Find answers to common questions and contact details if something isn’t working as expected in Sjekkliste_Y.
+          </p>
 
-          <div class="media" aria-label="Before you contact us">
-            <div class="shot">
-              <strong style="color:var(--text); display:block; margin-bottom:6px;">Before you contact us</strong>
-              Please include:
-              <div style="margin-top:10px; border-top:1px solid var(--line); padding-top:10px; color:var(--muted);">
-                • iPhone model and iOS version<br>
-                • What you expected vs. what happened<br>
-                • A screenshot (if relevant)
-              </div>
-            </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600/40 dark:bg-sky-500 dark:hover:bg-sky-400" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">Contact support</a>
+            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10" href="index_en.html">Back to landing page</a>
           </div>
         </div>
-      </section>
 
-      <section class="section" aria-label="FAQ">
-        <h2>Frequently asked questions</h2>
+        <aside class="rounded-3xl border border-slate-200/70 bg-white/60 p-6 backdrop-blur dark:border-white/10 dark:bg-white/5" aria-label="Before you contact us">
+          <div class="text-sm font-semibold text-slate-900 dark:text-white">Before you contact us</div>
+          <div class="mt-2 text-sm text-slate-600 dark:text-slate-300">Please include:</div>
+          <div class="mt-4 border-t border-slate-200/70 pt-4 text-sm text-slate-600 dark:border-white/10 dark:text-slate-300">
+            • iPhone model and iOS version<br>
+            • What you expected vs. what happened<br>
+            • A screenshot (if relevant)
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <section class="faq">
-          <details>
-            <summary>Who is this app for?</summary>
-            <p>
+    <section class="py-12">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <article class="prose prose-slate max-w-none dark:prose-invert">
+          <h2>Frequently asked questions</h2>
+        </article>
+
+        <section class="mt-6 space-y-3" aria-label="FAQ">
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Who is this app for?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Sjekkliste_Y is for private individuals taking delivery of a Tesla Model Y (new or used) who want a structured inspection workflow.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>Does the app work without internet?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Does the app work without internet?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Yes. The checklist works offline. Internet is only required if you choose to share or save the generated PDF using external services.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>Where are photos and data stored?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Where are photos and data stored?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               All photos and notes are stored locally on your device. No data is sent to external servers.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>Can I export the result?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Can I export the result?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Yes. The app generates a complete PDF report that you can save or share directly from your phone.
-            </p>
+            </div>
           </details>
 
           <!-- Extra FAQ points (requested) -->
-          <details>
-            <summary>I can’t share or save the PDF. What should I do?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">I can’t share or save the PDF. What should I do?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               First, try generating the PDF again. Then ensure you have at least a small amount of free storage available.
               If sharing fails, try a different target (e.g., Files, Mail) to confirm whether the issue is with a specific app/service.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>The app can’t access the camera/photos. How do I fix it?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">The app can’t access the camera/photos. How do I fix it?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Check iOS permissions: Settings → Sjekkliste_Y → allow Camera and Photos (or “Add Photos Only” if available).
               If permissions are denied, image capture/selection will not work.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>How do I reset the checklist?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">How do I reset the checklist?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Use “New check – empty list”. This clears selections, notes, and photos for the current check.
               Please note: this cannot be undone.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>Why are some items not marked as completed?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Why are some items not marked as completed?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Some sections require an explicit choice per item (e.g., OK / Not OK / Missing). Items left as “Select” are counted as not completed.
-            </p>
+            </div>
           </details>
 
-          <details>
-            <summary>Can I add my own checklist items?</summary>
-            <p>
+          <details class="group rounded-2xl border border-slate-200/70 bg-white/60 p-5 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <summary class="cursor-pointer list-none text-sm font-semibold text-slate-900 dark:text-white">Can I add my own checklist items?</summary>
+            <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
               Yes. You can add custom items during your inspection to capture anything you want to remember or document.
-            </p>
+            </div>
           </details>
         </section>
-      </section>
 
-      <section class="section" aria-label="Contact">
-        <h2>Contact</h2>
-        <div class="card">
-          <p style="margin-bottom: 10px;">
-            Need help, want to report a bug, or share feedback? Contact us here:
-          </p>
+        <section class="mt-12" aria-label="Contact">
+          <article class="prose prose-slate max-w-none dark:prose-invert">
+            <h2>Contact</h2>
+          </article>
 
-          <div class="cta-row" style="margin-top: 0;">
-            <a class="btn btn-primary" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">
-              support@sjekklistey.com
-            </a>
-            <a class="btn btn-secondary" href="privacy.html">Privacy Policy</a>
+          <div class="mt-6 rounded-3xl border border-slate-200/70 bg-white/60 p-6 backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <p class="text-slate-600 dark:text-slate-300">
+              Need help, want to report a bug, or share feedback? Contact us here:
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600/40 dark:bg-sky-500 dark:hover:bg-sky-400" href="mailto:support@sjekklistey.com?subject=Sjekkliste_Y%20Support">
+                support@sjekklistey.com
+              </a>
+              <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10" href="privacy_en.html">
+                Privacy Policy
+              </a>
+            </div>
+
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              We typically respond within a short time on weekdays.
+            </p>
           </div>
+        </section>
+      </div>
+    </section>
+  </main>
 
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 14px; color: var(--muted);">
-            We typically respond within a short time on weekdays.
-          </p>
-        </div>
-      </section>
-
-      <footer>
-        <div>© <span id="year"></span> Sjekkliste_Y</div>
-        <nav aria-label="Quick links">
-          <a href="index_en.html">Home</a>
-          <a href="privacy.html">Privacy</a>
-        </nav>
-      </footer>
-    </main>
-  </div>
+  <footer class="border-t border-slate-200/60 py-10 text-sm text-slate-600 dark:border-white/10 dark:text-slate-300">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <div>© <span id="year"></span> Check List_Y</div>
+      <nav class="flex gap-3" aria-label="Quick links">
+        <a class="hover:text-slate-900 dark:hover:text-white" href="index_en.html">Home</a>
+        <a class="hover:text-slate-900 dark:hover:text-white" href="privacy_en.html">Privacy</a>
+        <a class="hover:text-slate-900 dark:hover:text-white" href="support.html" hreflang="nb">Norsk</a>
+      </nav>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    try {
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    } catch (_) {}
   </script>
 </body>
 </html>
